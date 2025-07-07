@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- PUT YOUR PAGE NAME -->
+    <title>chimera</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="my-styles.css" />
+
+    <!-- The following libraries and polyfills are recommended to maximize browser support -->
+    <!-- NOTE: you must adjust the paths as appropriate for your project -->
+
+    <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script
+      src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js"
+      defer
+    ></script>
+  </head>
+
+  <body>
+    <!-- HERE IS WHERE THE MAGIC HAPPENS!
+src = link to your glb asset
+shadow-intensity= how visible you want your shadows to be
+the rest leaveit as it is!-->
+
+    <model-viewer
+      src="./assets/chimera.glb"
+      shadow-intensity="3"
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      ar-placement="floor"
+      camera-controls
+      autoplay
+      ar-scale="auto"
+      auto-rotate
+    >
+      <!-- *optional: REPLACE THE URL WITH YOUR GRAPHIC FOR THE AR BUTTON -->
+      <button
+        slot="ar-button"
+        id="ar-button"
+        style="
+          background-image: url(./assets/Glyph-ARKit-Badge-WithName.png);
+        "
+      ></button>
+    </model-viewer>
+
+    <!-- DO NOT DELETE! -->
+    <footer>
+      <p>Zuzanna Barczyk, Title</p>
+
+      <p style="font-size: 7px">
+        <a href="https://atlasofhabitats.uni-ak.ac.at/">Zuzanna Barczyk</a>
+        * Workshop: Becoming Chimeric (2025)
+        <a href="https://appliedforeignaffairs.uni-ak.ac.at">Applied Foreign Affairs</a>
+        *
+        <a href="https://www.dieangewandte.at/">Die Angewandte</a>
+      </p>
+      <br />
+    </footer>
+
+    <!-- DO NOT DELETE! -->
+    <!-- 💁 Include both scripts below to support all browsers! -->
+
+    <!-- Loads <model-viewer> for modern browsers: -->
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+  </body>
+</html>
